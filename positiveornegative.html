@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Positive or Negative?</title>
+		<link href="styles.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+        <h2><i>POSITIVE OR NEGATIVE?</i></h2><br/><br/>
+		<div class="container">
+			
+			<label for="num">ENTER A NUMBER</label><br/><br/>
+			<input type="number" id="num" value="0"/><br/><br/>
+			
+			<button onclick="check()">CHECK</button><br/><br/>
+			
+			<h3 id="result"></h3>
+			
+		</div>
+
+        <div class="section">
+            <button onclick="Home()"><a href="index.html">BACK TO CHOICES</a></button>
+        </div>
+        <p>Submitted by: <br> <b>Dean Alsendro E. Sumera</b></p>
+
+    </body>
+
+<script>
+        function check()
+        {
+            var num = parseFloat(document.getElementById("num").value) || 0;
+            if (num > 0)
+            {
+                document.getElementById("result").innerHTML = num + " IS POSITIVE.";
+            }
+            else if (num < 0)
+            {
+                document.getElementById("result").innerHTML = num + " IS NEGATIVE.";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML = "ZERO!";
+            }
+        }
+</script>
+</html>
